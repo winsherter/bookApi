@@ -5,7 +5,7 @@
 3. API Documentation
 4. Endpoints
 ## Overview
-
+We want to set up an API to manage books in a library. The books are grouped by categories. Each book has a unique ISBN code, a title, the date of publication, the name of the author, the name of the publisher. The category is characterized by an id and the label of the category.
 
 ## Getting Started
 
