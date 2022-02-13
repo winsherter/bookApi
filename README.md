@@ -420,6 +420,9 @@ GENERAL: This endpoints returns a list of book categories object, success value,
 Sample: curl https://capstoneapi.herokuapp.com/actors
 
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+Here's the Result
+```
 {
     "Categories": [
         {
@@ -470,6 +473,10 @@ GENERAL: This endpoint allows you to get for a particular Book Categorie using i
 Sample: curl https://capstoneapi.herokuapp.com/actors
 
 Sample: curl https://capstoneapi.herokuapp.com/actors
+
+```
+
+```
 {
     "Categorie": {
         "Categorie": "Science",
