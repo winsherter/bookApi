@@ -113,8 +113,12 @@ Errors are retourned as JSON objects in the following format:
 GENERAL: This endpoints returns a list of book object, success value, total number of the books.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+** Here's the Result:
+
+```
 {
     "Book": [
         {
@@ -127,177 +131,6 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
             "Titre": "In The Room"
         },
         {
-            "Auteur": "Gray Shark",
-            "Code Categorie": 1,
-            "Date de Publication": "May 23, 2021",
-            "Editeur": "The Gun House",
-            "Identifiant": 2,
-            "Isbn": "HG189",
-            "Titre": "Killer Outside"
-        },
-        {
-            "Auteur": "Great Whale",
-            "Code Categorie": 3,
-            "Date de Publication": "Apr 02, 2020",
-            "Editeur": "A.Lange Sohne",
-            "Identifiant": 3,
-            "Isbn": "GT120",
-            "Titre": "Fatest Car"
-        },
-        {
-            "Auteur": "Lord P",
-            "Code Categorie": 4,
-            "Date de Publication": "Jul 03, 2021",
-            "Editeur": "Jaeger LeCoultre",
-            "Identifiant": 4,
-            "Isbn": "HN120",
-            "Titre": "The Plug"
-        },
-        {
-            "Auteur": "The Goat",
-            "Code Categorie": 5,
-            "Date de Publication": "Sep 20, 2021",
-            "Editeur": "Arsham Studio",
-            "Identifiant": 5,
-            "Isbn": "HET12",
-            "Titre": "The Dose"
-        },
-        {
-            "Auteur": "The Ice Drip",
-            "Code Categorie": 6,
-            "Date de Publication": "Oct 15, 2021",
-            "Editeur": "Santa Monica Studio",
-            "Identifiant": 6,
-            "Isbn": "KJ180",
-            "Titre": "Purple Drink"
-        },
-        {
-            "Auteur": "A Cold Wall",
-            "Code Categorie": 7,
-            "Date de Publication": "Aug 17, 2020",
-            "Editeur": "Ubisoft",
-            "Identifiant": 7,
-            "Isbn": "KO999",
-            "Titre": "The Roommate"
-        },
-        {
-            "Auteur": "Charlmagne",
-            "Code Categorie": 8,
-            "Date de Publication": "May 23, 2011",
-            "Editeur": "Klei Ent",
-            "Identifiant": 8,
-            "Isbn": "QW199",
-            "Titre": "The Standard"
-        },
-        {
-            "Auteur": "The Plug Goat",
-            "Code Categorie": 9,
-            "Date de Publication": "May 23, 2001",
-            "Editeur": "Universal Studio",
-            "Identifiant": 9,
-            "Isbn": "RF189",
-            "Titre": "The Lion"
-        },
-        {
-            "Auteur": "The OG",
-            "Code Categorie": 2,
-            "Date de Publication": "Sep 19, 2002",
-            "Editeur": "Paramount Studio",
-            "Identifiant": 10,
-            "Isbn": "HJ157",
-            "Titre": "Neck Pain"
-        },
-        {
-            "Auteur": "Green Montain",
-            "Code Categorie": 1,
-            "Date de Publication": "Jan 08, 2000",
-            "Editeur": "Chateau Rouge",
-            "Identifiant": 11,
-            "Isbn": "B671X7",
-            "Titre": "The Player"
-        },
-        {
-            "Auteur": "Ryan Placer",
-            "Code Categorie": 1,
-            "Date de Publication": "May 23, 2011",
-            "Editeur": "Mont Blanc",
-            "Identifiant": 12,
-            "Isbn": "HO1E89",
-            "Titre": "The Outside"
-        },
-        {
-            "Auteur": "Chris Below",
-            "Code Categorie": 3,
-            "Date de Publication": "Apr 02, 2010",
-            "Editeur": "A.Lange Sohne",
-            "Identifiant": 13,
-            "Isbn": "GM12Z0",
-            "Titre": "Python"
-        },
-        {
-            "Auteur": "Marie Mage",
-            "Code Categorie": 4,
-            "Date de Publication": "Jul 03, 2001",
-            "Editeur": "Jacque Marie Mage",
-            "Identifiant": 14,
-            "Isbn": "HG120",
-            "Titre": "Flask"
-        },
-        {
-            "Auteur": "Morjias SH",
-            "Code Categorie": 5,
-            "Date de Publication": "Sep 20, 2002",
-            "Editeur": "Moncler",
-            "Identifiant": 15,
-            "Isbn": "HGIT12",
-            "Titre": "Dose"
-        },
-        {
-            "Auteur": "J.M.Weston",
-            "Code Categorie": 6,
-            "Date de Publication": "Oct 15, 2012",
-            "Editeur": "Santa Monica Studio",
-            "Identifiant": 16,
-            "Isbn": "KJ100",
-            "Titre": "White"
-        },
-        {
-            "Auteur": "A.C.W",
-            "Code Categorie": 7,
-            "Date de Publication": "Aug 17, 2013",
-            "Editeur": "Staple",
-            "Identifiant": 17,
-            "Isbn": "KO79C9",
-            "Titre": "The Law"
-        },
-        {
-            "Auteur": "$Not",
-            "Code Categorie": 8,
-            "Date de Publication": "May 23, 2015",
-            "Editeur": "Under Neath",
-            "Identifiant": 18,
-            "Isbn": "QO5199",
-            "Titre": "The Village"
-        },
-        {
-            "Auteur": "Etienne Pillow",
-            "Code Categorie": 9,
-            "Date de Publication": "May 23, 2017",
-            "Editeur": "Universal",
-            "Identifiant": 19,
-            "Isbn": "RKK189",
-            "Titre": "The Rook"
-        },
-        {
-            "Auteur": "Mr Hines",
-            "Code Categorie": 9,
-            "Date de Publication": "Sep 19, 1990",
-            "Editeur": "Paramount",
-            "Identifiant": 20,
-            "Isbn": "UIO157",
-            "Titre": "Life"
-        },
-        {
             "Auteur": "Green Montain",
             "Code Categorie": 1,
             "Date de Publication": "Jan 08, 1998",
@@ -305,51 +138,6 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
             "Identifiant": 21,
             "Isbn": "B6701X7",
             "Titre": "The P Power"
-        },
-        {
-            "Auteur": "Ryan Placer",
-            "Code Categorie": 1,
-            "Date de Publication": "May 23, 2000",
-            "Editeur": "Mont Blanc",
-            "Identifiant": 22,
-            "Isbn": "HO1E809",
-            "Titre": "Outside"
-        },
-        {
-            "Auteur": "Chris Below",
-            "Code Categorie": 3,
-            "Date de Publication": "Apr 02, 1994",
-            "Editeur": "A.Lange Sohne",
-            "Identifiant": 23,
-            "Isbn": "7GM12Z0",
-            "Titre": "Automation"
-        },
-        {
-            "Auteur": "Marie Mage",
-            "Code Categorie": 4,
-            "Date de Publication": "Jul 03, 1789",
-            "Editeur": "Jacque Marie Mage",
-            "Identifiant": 24,
-            "Isbn": "H5G120",
-            "Titre": "Back Wood"
-        },
-        {
-            "Auteur": "Morjias SH",
-            "Code Categorie": 5,
-            "Date de Publication": "Sep 20, 2005",
-            "Editeur": "Moncler",
-            "Identifiant": 25,
-            "Isbn": "RHGIT12",
-            "Titre": "Saratoga Square"
-        },
-        {
-            "Auteur": "J.M.Weston",
-            "Code Categorie": 6,
-            "Date de Publication": "Oct 15, 2020",
-            "Editeur": "Santa Monica Studio",
-            "Identifiant": 26,
-            "Isbn": "K0J100",
-            "Titre": "The Triangle"
         },
         {
             "Auteur": "A.C.W",
@@ -395,10 +183,14 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 ### GET/books/book_ID
 GENERAL: This endpoint allows you to get for a particular Book using its id. This endpoint
  returns one book, and the detail.
+ ```
+Sample: curl https://capstoneapi.herokuapp.com/actors
+                    OR
+Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-Sample: curl https://capstoneapi.herokuapp.com/actors
+** Here's the Result:
 
-Sample: curl https://capstoneapi.herokuapp.com/actors
+```
 {
     "Livre": {
         "Auteur": "Lord P",
@@ -418,10 +210,11 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of book categories object, success value, total number of the categories.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-Here's the Result
+** Here's the Result
+
 ```
 {
     "Categories": [
@@ -471,10 +264,10 @@ Here's the Result
 GENERAL: This endpoint allows you to get for a particular Book Categorie using its id. This endpoint return one book Categorie, and the detail.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
 ```
+** Here's the Result:
 
 ```
 {
@@ -491,8 +284,12 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of books stored in a categorie object, success value, total number of the books in the categorie and the categorie name.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+** Here's the Result:
+
+```
 {
     "Book": [
         {
@@ -551,8 +348,13 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of movies object, success value, total number of the movies.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+** Here's the Result:
+
+```
+
 
 ```
 
@@ -560,8 +362,13 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of movies object, success value, total number of the movies.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+** Here's the Result:
+
+```
+
 
 ```
 
@@ -570,8 +377,13 @@ GENERAL: Delete the book of the given ID if it exists. Return the id of the dele
 success value, total of book remaining.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+** Here's the Result:
+
+```
+
 
 ```
 
@@ -579,7 +391,12 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints Delete the categorie of the given ID if it exists. Return the id of the deleted categorie, success value, total of categories remaining.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-
+                    OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
+```
+** Here's the Result:
+
+```
+
 
 ```
