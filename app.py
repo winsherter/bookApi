@@ -96,7 +96,7 @@ class Livre(db.Model):
             "Auteur":self.auteur, 
             "Editeur":self.editeur, 
             "Code Categorie":self.idcat, 
-            "Date de Publication":self.datepub }
+            "Date de Publication":self.datepub.strftime("%b %d, %Y") }
 db.create_all()
 ########################################################################################################################################
 #
@@ -201,28 +201,31 @@ def deleteCategorie(id):
 #######################################################################################################################################
 @app.route("/livres/<int:id>",methods=["PATCH"])
 def updateLivre(id):
-    body=request.get_json() 
-    livre=Livre.query.get(id) 
-    livre.isbn=body.get("isbn",none) 
-    livre.titre=body.get("titre",none)
-    livre.auteur=body.get("auteur",none)
-    livre.editeur=body.get("editeur",none)
-    livre.datepub=body.get("datepub",none)
-    livre.idcat=body.get
-    if livre is None:
-        abort(404)
-    if livre.isbn is None:
-        abort(400)
-    if livre.titre is None:
-        abort(400)
-    if livre.auteur is None:
-        abort(400)
-    if livre.editeur is None:
-        abort(400)
-    if livre.datepub is None:
-        abort(400)
-    if livre.idcat is None:
-        abort(400)
+    try:
+        body=request.get_json() 
+        livre=Livre.query.get(id) 
+        livre.isbn=body.get("isbn",none) 
+        livre.titre=body.get("titre",none)
+        livre.auteur=body.get("auteur",none)
+        livre.editeur=body.get("editeur",none)
+        livre.datepub=body.get("datepub",none)
+        livre.idcat=body.get
+        if livre is None:
+            abort(404)
+        if livre.isbn is None:
+            abort(400)
+        if livre.titre is None:
+            abort(400)
+        if livre.auteur is None:
+            abort(400)
+        if livre.editeur is None:
+            abort(400)
+        if livre.datepub is None:
+            abort(400)
+        if livre.idcat is None:
+            abort(400)
+    except AttributeError:
+        abort(500)
     else:
         livre.update()
         return jsonify({
@@ -237,13 +240,16 @@ def updateLivre(id):
 #######################################################################################################################################
 @app.route("/categories/<int:id>",methods=["PATCH"])
 def updateCategorie(id):
-    body=request.get_json() 
-    categ=Categorie.query.get(id) 
-    categ.libelle=body.get("nom",none) 
-    if categ is None:
-        abort(404)
-    if categ.libelle is None:
-        abort(400)
+    try:
+        body=request.get_json()
+        categ=Categorie.query.get(id) 
+        categ.libelle=body.get("nom",none) 
+        if categ is None:
+            abort(404)
+        if categ.libelle is None:
+            abort(400)
+    except AttributeError:
+        abort(500)
     else:
         categ.update()
         return jsonify({
@@ -294,3 +300,11 @@ def badRequest(error):
         "Message":"Bad Request",
         "Error":400
     }),400
+    
+@app.errorhandler(405)
+def badRequest(error):
+    return jsonify({
+        "Success":False,
+        "Message":"Method Not Allowed",
+        "Error":405
+    }),405

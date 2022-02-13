@@ -1,4 +1,4 @@
-# Full Stack PLANTS API
+# BOOK API
 
 ## Getting Started
 
@@ -29,31 +29,29 @@ This will install all of the required packages we selected within the `requireme
 
 - [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
 
-- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py. 
-
-- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
+- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py.  
 
 ## Database Setup
 With Postgres running, restore a database using the plants_database.sql file provided. From the backend folder in terminal run:
 ```bash
-psql plants_database < plants_database.sql
+psql bookdb < bookdb.sql
 ```
 
 ## Running the server
 
-From within the `plants_api` directory first ensure you are working using your created virtual environment.
+From within the `bookApi` directory first ensure you are working using your created virtual environment.
 
 To run the server on Linux or Mac, execute:
 
 ```bash
-export FLASK_APP=flaskr
+export FLASK_APP=flask
 export FLASK_ENV=development
 flask run
 ```
 To run the server on Windows, execute:
 
 ```bash
-set FLASK_APP=flaskr
+set FLASK_APP=flask
 set FLASK_ENV=development
 flask run
 ```
