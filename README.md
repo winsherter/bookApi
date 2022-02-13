@@ -98,11 +98,11 @@ The API will return four error types when requests fail:
 . 405: Method Not Allowed
 
 Errors are retourned as JSON objects in the following format:
-{
-    "success":False
-    "error": 400
-    "message":"Bad request"
-}
+> {
+>    "success":False
+>    "error": 400
+>    "message":"Bad request"
+>}
 
 ## Endpoints
 
