@@ -113,11 +113,12 @@ Errors are retourned as JSON objects in the following format:
 GENERAL: This endpoints returns a list of book object, success value, total number of the books.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
-
 
 ```
 {
@@ -184,13 +185,14 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 ### GET/books/book_ID
 GENERAL: This endpoint allows you to get for a particular Book using its id. This endpoint
  returns one book, and the detail.
- ```
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
-
 
 ```
 {
@@ -212,7 +214,9 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of book categories object, success value, total number of the categories.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result**
@@ -266,7 +270,9 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoint allows you to get for a particular Book Categorie using its id. This endpoint return one book Categorie, and the detail.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
@@ -286,7 +292,9 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of books stored in a categorie object, success value, total number of the books in the categorie and the categorie name.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
@@ -350,7 +358,9 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of movies object, success value, total number of the movies.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
@@ -364,7 +374,9 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints returns a list of movies object, success value, total number of the movies.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
@@ -379,7 +391,9 @@ GENERAL: Delete the book of the given ID if it exists. Return the id of the dele
 success value, total of book remaining.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
