@@ -394,7 +394,7 @@ GENERAL: This endpoints Delete the categorie of the given ID if it exists. Retur
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-                    ***OR***
+***OR***
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
