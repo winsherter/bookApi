@@ -28,7 +28,7 @@ This will install all of the required packages within the `requirements.txt` fil
 
 ```bash
 pip install -r requirements.txt
-or
+                OR
 pip3 install -r requirements.txt
 ```
 #### 1.4 - Key Dependencies
