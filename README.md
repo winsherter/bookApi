@@ -3,7 +3,7 @@
 1. Overview
 2. Getting Started
 3. API Documentation
-4. Existing roles
+4. Endpoints
 ## Overview
 
 
@@ -11,16 +11,16 @@
 
 ### 1 - Installing Dependencies
 
-#### Python 3.8.5
+#### 1.1 - Python 3.8.5
 
 Follow instructions to install the latest version of python for your platform in the 
 [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
-#### Virtual Enviornment
+#### 1.2 - Virtual Enviornment
 
 We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
-#### PIP Dependencies
+#### 1.3 - PIP Dependencies
 
 Once you have your virtual environment setup and running, install dependencies by naviging to the `/bookApi` directory and run:
 
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 or
 pip3 install -r requirements.txt
 ```
-##### Key Dependencies
+#### 1.4 - Key Dependencies
 
 - [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
 
@@ -43,7 +43,23 @@ With Postgres running, restore a database using the plants_database.sql file pro
 psql bookdb < bookdb.sql
 ```
 ## API Documentation
-### 1 - Running the server
+### 1 - API Role
+
+This API works with 2 roles
+
+1. CASTING ASSISTANT:
+
+    - GET/movie : can get all movies
+    - GET/actors : can get all actors
+    - GET/actors(actor_id): Get a specific actor by ID
+    - GET/actors(movie_id): Get a specific movie by ID
+
+2. CASTING DIRECTOR (EVERYTHING FROM CASTING ASSISTANT AND.......)
+    - POST/actors: can create an new actor
+    - PATCH/movies: can edit movie
+    - PATCH/actors: can edit actor
+    - DELETE/actors: Delete a specific actor by ID
+### 2 - Running the server
 
 From within the `bookApi` directory first ensure you are working using your created virtual environment.
 
@@ -66,19 +82,14 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `app` directs flask to use the `app` directory and the `__init__.py` file to find the application. 
 
-### 2 - API REFERENCE
+### 3 - API References
 
-Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://localhost:5000; which is set as a proxy in frontend configuration.
+Online: This API has been deployed on heroku and is available from the link https://capstoneapi.herokuapp.com
 
-This API has been deployed on heroku and is available from the link https://capstoneapi.herokuapp.com
+Base URL: This app can be run locally and the backend app is hosted at the default, http://localhost:5000;
+which is set as a proxy in frontend configuration.
 
-### 3 - Error Handling
-Errors are retourned as JSON objects in the following format:
-{
-    "success":False
-    "error": 400
-    "message":"Bad request"
-}
+### 4 - Error Handling
 
 The API will return four error types when requests fail:
 . 400: Bad request
@@ -86,10 +97,12 @@ The API will return four error types when requests fail:
 . 404: Not found
 . 405: Method Not Allowed
 
+Errors are retourned as JSON objects in the following format:
+{
+    "success":False
+    "error": 400
+    "message":"Bad request"
+}
+
 ## Endpoints
-. ## GET/plants
 
-    GENERAL:
-        This endpoints returns a list of plant object, success value, total number of the plants. 
-
-    SAMPLE: curl http://localhost:5000/livres
