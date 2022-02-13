@@ -47,21 +47,24 @@ psql bookdb < bookdb.sql
 
 This API works with 2 roles
 
-1. CASTING ASSISTANT:
+#### 1. Book Operation:
 
-    - GET/movie : can get all movies
-    - GET/actors : can get all actors
-    - GET/actors(actor_id): Get a specific actor by ID
-    - GET/actors(movie_id): Get a specific movie by ID
+    - GET/book : Get all books
+    - GET/book(book_id): Get a specific book by ID
+    - PATCH/book(book_id): Modify a specific book by ID
+    - DELETE/book(book_id): Delete a specific book by ID
 
-2. CASTING DIRECTOR (EVERYTHING FROM CASTING ASSISTANT AND.......)
-    - POST/actors: can create an new actor
-    - PATCH/movies: can edit movie
-    - PATCH/actors: can edit actor
-    - DELETE/actors: Delete a specific actor by ID
+#### 2. Categorie
+    - GET/categories: Get all book categories
+    - GET/categories(categorie_id): Get a specific book categorie by ID
+    - GET/categories/(categorie_id)/book: Get a list of book in a specific categorie by ID
+    - PATCH/categories(categorie_id): Modify a specific book categorie by ID
+    - DELETE/categories(categorie_id): Delete a specific book categorie by ID
+
+    - POST/categories: can create an new book categorie
 ### 2 - Running the server
 
-From within the `bookApi` directory first ensure you are working using your created virtual environment.
+From within the `bookApi` directory first ensure you are working in the created virtual environment.
 
 To run the server on Linux or Mac, execute:
 
@@ -78,25 +81,24 @@ set FLASK_ENV=development
 flask run
 ```
 
-Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
+Setting the `FLASK_ENV` variable to `development` will automatically detect file changes and restart the server.
 
 Setting the `FLASK_APP` variable to `app` directs flask to use the `app` directory and the `__init__.py` file to find the application. 
 
 ### 3 - API References
 
-Online: This API has been deployed on heroku and is available from the link:
-``` https://capstoneapi.herokuapp.com```
+Online: This API has been deployed on heroku and is available from the link: https://capstoneapi.herokuapp.com
 
-Base URL: This app can be run locally and the backend app is hosted at the default, ```http://localhost:5000```
-which is set as a proxy in frontend configuration.
+Base URL: This app can be run locally and the backend app is hosted at the default,
+http://localhost:5000 which is set as a proxy in frontend configuration.
 
 ### 4 - Error Handling
 
 The API will return four error types when requests fail:
-. 400: Bad request
-. 500: Internal server error
-. 404: Not found
-. 405: Method Not Allowed
+- 400: Bad request
+- 500: Internal server error
+- 404: Not found
+- 405: Method Not Allowed
 
 Errors are retourned as JSON objects in the following format:
 ```
