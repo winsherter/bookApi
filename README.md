@@ -47,21 +47,21 @@ psql bookdb < bookdb.sql
 
 This API works with 2 roles
 
-#### 1. Book Operation:
+#### 1.1 - Book Operation:
 
-    - GET/book : Get all books
-    - GET/book(book_id): Get a specific book by ID
-    - PATCH/book(book_id): Modify a specific book by ID
-    - DELETE/book(book_id): Delete a specific book by ID
+- GET/book : Get all books
+- GET/book(book_id): Get a specific book by ID
+- PATCH/book(book_id): Modify a specific book by ID
+- DELETE/book(book_id): Delete a specific book by ID
 
-#### 2. Categorie
-    - GET/categories: Get all book categories
-    - GET/categories(categorie_id): Get a specific book categorie by ID
-    - GET/categories/(categorie_id)/book: Get a list of book in a specific categorie by ID
-    - PATCH/categories(categorie_id): Modify a specific book categorie by ID
-    - DELETE/categories(categorie_id): Delete a specific book categorie by ID
+#### 1.2 - Categorie
+- GET/categories: Get all book categories
+- GET/categories(categorie_id): Get a specific book categorie by ID
+- GET/categories/(categorie_id)/book: Get a list of book in a specific categorie by ID
+- PATCH/categories(categorie_id): Modify a specific book categorie by ID
+- DELETE/categories(categorie_id): Delete a specific book categorie by ID
 
-    - POST/categories: can create an new book categorie
+- POST/categories: can create an new book categorie
 ### 2 - Running the server
 
 From within the `bookApi` directory first ensure you are working in the created virtual environment.
