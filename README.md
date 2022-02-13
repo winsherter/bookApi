@@ -355,7 +355,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 
 ### PATCH/books/book_ID
-GENERAL: This endpoints returns a list of movies object, success value, total number of the movies.
+GENERAL: This endpoint is used to update a book and returns the book we just updated.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
@@ -382,7 +382,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 
 ### PATCH/categories/categories_ID
-GENERAL: This endpoints returns a list of movies object, success value, total number of the movies.
+GENERAL: This endpoint is used to update a category and returns the category which we updated
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
