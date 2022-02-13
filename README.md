@@ -84,9 +84,10 @@ Setting the `FLASK_APP` variable to `app` directs flask to use the `app` directo
 
 ### 3 - API References
 
-Online: This API has been deployed on heroku and is available from the link https://capstoneapi.herokuapp.com
+Online: This API has been deployed on heroku and is available from the link:
+``` https://capstoneapi.herokuapp.com```
 
-Base URL: This app can be run locally and the backend app is hosted at the default, http://localhost:5000;
+Base URL: This app can be run locally and the backend app is hosted at the default, ```http://localhost:5000```
 which is set as a proxy in frontend configuration.
 
 ### 4 - Error Handling
