@@ -116,7 +116,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 {
@@ -188,7 +188,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 {
@@ -213,7 +213,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result
+** Here's the Result**
 
 ```
 {
@@ -267,7 +267,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 {
@@ -287,7 +287,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 {
@@ -351,7 +351,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 
@@ -365,7 +365,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 
@@ -380,7 +380,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 
@@ -394,7 +394,7 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
                     OR
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
-** Here's the Result:
+** Here's the Result:**
 
 ```
 
