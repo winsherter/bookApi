@@ -366,8 +366,19 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 **Here's the Result:**
 
 ```
-
-
+{
+    "Succes": true,
+    "Updated Book": {
+        "Auteur": "UK Space Agency",
+        "Code Categorie": 9,
+        "Date de Publication": "Dec 31, 2020",
+        "Editeur": "NASA",
+        "Identifiant": 31,
+        "Isbn": "XCERZ7",
+        "Titre": "Solar System Find Us"
+    },
+    "Updated Book ID": 31
+}
 ```
 
 ### PATCH/categories/categories_ID
@@ -382,8 +393,14 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 **Here's the Result:**
 
 ```
-
-
+{
+    "Succes": true,
+    "Updated Categorie": {
+        "Id": 10,
+        "Nom Categorie": "Space"
+    },
+    "Updated Categorie ID": 10
+}
 ```
 
 ### DELETE/books/book_ID
@@ -399,8 +416,20 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 **Here's the Result:**
 
 ```
-
-
+{
+    "Deleted Book": {
+        "Auteur": "Mexican Space Agency",
+        "Code Categorie": 10,
+        "Date de Publication": "Jan 11, 1990",
+        "Editeur": "CNSA",
+        "Identifiant": 40,
+        "Isbn": "7U0",
+        "Titre": "Operates Satellites"
+    },
+    "Succes": true,
+    "Total Book": 39,
+    "deletedID": 40
+}
 ```
 
 ### DELETE/categories/categories_ID
@@ -415,6 +444,13 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 **Here's the Result:**
 
 ```
-
-
+{
+    "Deleted Categorie": {
+        "Id": 11,
+        "Nom Categorie": "Sci-Fi"
+    },
+    "Succes": true,
+    "Total Categories": 10,
+    "deletedID": 11
+}
 ```

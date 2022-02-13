@@ -53,7 +53,7 @@ class Categorie(db.Model):
     def format(self):
         return{
             "Id":self.id,
-            "Categorie":self.libelle }
+            "Nom Categorie":self.libelle }
 ########################################################################################################################################
 #
 #                                        CLASS LIVRE + METHODES CRUD
@@ -204,12 +204,12 @@ def updateLivre(id):
     try:
         body=request.get_json() 
         livre=Livre.query.get(id) 
-        livre.isbn=body.get("isbn",none) 
-        livre.titre=body.get("titre",none)
-        livre.auteur=body.get("auteur",none)
-        livre.editeur=body.get("editeur",none)
-        livre.datepub=body.get("datepub",none)
-        livre.idcat=body.get
+        livre.isbn=body.get("Isbn",None) 
+        livre.titre=body.get("Titre",None)
+        livre.auteur=body.get("Auteur",None)
+        livre.editeur=body.get("Editeur",None)
+        livre.datepub=body.get("Date de Publication",None)
+        livre.idcat=body.get("Code Categorie",None)
         if livre is None:
             abort(404)
         if livre.isbn is None:
@@ -224,15 +224,15 @@ def updateLivre(id):
             abort(400)
         if livre.idcat is None:
             abort(400)
-    except AttributeError:
+    except (AttributeError,NameError):
         abort(500)
     else:
-        livre.update()
-        return jsonify({
-        "Succes":True,
-        "Updated Book ID":id,
-        "Updated Book":livre.format()
-    })
+            livre.update()
+            return jsonify({
+            "Succes":True,
+            "Updated Book ID":id,
+            "Updated Book":livre.format()
+        })
 ########################################################################################################################################
 #
 #                                        MODIFIER CATEGORIE AVEC SON ID
@@ -243,12 +243,12 @@ def updateCategorie(id):
     try:
         body=request.get_json()
         categ=Categorie.query.get(id) 
-        categ.libelle=body.get("nom",none) 
+        categ.libelle=body.get("Nom Categorie",None) 
         if categ is None:
             abort(404)
         if categ.libelle is None:
             abort(400)
-    except AttributeError:
+    except (AttributeError,NameError):
         abort(500)
     else:
         categ.update()
