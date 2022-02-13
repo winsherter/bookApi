@@ -393,7 +393,9 @@ Sample: curl https://capstoneapi.herokuapp.com/actors
 GENERAL: This endpoints Delete the categorie of the given ID if it exists. Return the id of the deleted categorie, success value, total of categories remaining.
 ```
 Sample: curl https://capstoneapi.herokuapp.com/actors
-                    OR
+```
+                    ***OR***
+```
 Sample: curl https://capstoneapi.herokuapp.com/actors
 ```
 **Here's the Result:**
