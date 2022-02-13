@@ -103,7 +103,7 @@ db.create_all()
 #                                        AFFICHER TOUT LES LIVRES
 #
 #######################################################################################################################################
-@app.route("/livres",methods=["GET"])
+@app.route("/books",methods=["GET"])
 def allLivre():
     livres=Livre.query.all()
     formLivre=[livre.format() for livre in livres]
@@ -131,7 +131,7 @@ def allCategorie():
 #                                        AFFICHER UN LIVRE AVEC SON ID
 #
 #######################################################################################################################################
-@app.route("/livres/<int:id>",methods=["GET"])
+@app.route("/books/<int:id>",methods=["GET"])
 def getOneLivre(id):
     livre=Livre.query.get(id)
     if livre is None:
@@ -163,7 +163,7 @@ def getOneCategorie(id):
 #                                        SUPPRIMER UN LIVRE
 #
 #######################################################################################################################################
-@app.route("/livres/<int:id>",methods=["DELETE"])
+@app.route("/books/<int:id>",methods=["DELETE"])
 def deleteLivre(id):
     livre=Livre.query.get(id)
     if livre is None:
@@ -199,7 +199,7 @@ def deleteCategorie(id):
 #                                        MODIFIER LIVRE AVEC SON ID
 #
 #######################################################################################################################################
-@app.route("/livres/<int:id>",methods=["PATCH"])
+@app.route("/books/<int:id>",methods=["PATCH"])
 def updateLivre(id):
     try:
         body=request.get_json() 
@@ -262,7 +262,7 @@ def updateCategorie(id):
 #                                        AFFICHER LES LIVRES D'UNE CATEGORIE
 #
 #######################################################################################################################################
-@app.route("/categories/<int:id>/livres",methods=["GET"])
+@app.route("/categories/<int:id>/books",methods=["GET"])
 def getLivreInCategorie(id):
     livres=Livre.query.filter_by(idcat=id)
     formLivre=[livre.format() for livre in livres]
