@@ -89,8 +89,17 @@ Setting the `FLASK_APP` variable to `app` directs flask to use the `app` directo
 
 Online: This API has been deployed on heroku and is available from the link: https://capstoneapi.herokuapp.com
 
-Base URL: This app can be run locally and the backend app is hosted at the default,
+Locally: This app can be run locally and the backend app is hosted at the default,
 http://localhost:5000 which is set as a proxy in frontend configuration.
+
+To execute your API locally, you need to modify in the app.py file, the value ENV = 'prod' to ENV = 'dev'. 
+You must then launch the migrations to create your database. These migrations are managed using the following commands:
+```
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade.
+```
+After performing these migrations, you will then execute the commands to launch your API. To test all endpoints of your API, please use the **CapstoneAPI_localhost.postman_collection.json** file by importing it from Postman. If you don't have postman, you can download it from https://www.postman.com. To run the server, execute:
 
 ### 4 - Error Handling
 
