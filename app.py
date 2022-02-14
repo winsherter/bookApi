@@ -97,7 +97,7 @@ class Livre(db.Model):
             "Editeur":self.editeur, 
             "Code Categorie":self.idcat, 
             "Date de Publication":self.datepub.strftime("%b %d, %Y") }
-
+db.create_all()
 ########################################################################################################################################
 #
 #                                        AFFICHER TOUT LES LIVRES
