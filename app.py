@@ -272,7 +272,11 @@ def getLivreInCategorie(id):
         "Book":formLivre,
         "Total Book":len(formLivre)
     })
-
+########################################################################################################################################
+#
+#                                        DEFAULT ROUTE
+#
+#######################################################################################################################################
 @app.route("/",methods=["GET"])
 def index():
     return jsonify({
@@ -306,7 +310,7 @@ def badRequest(error):
         "Message":"Bad Request",
         "Error":400
     }),400
-    
+
 @app.errorhandler(405)
 def badRequest(error):
     return jsonify({
@@ -314,6 +318,3 @@ def badRequest(error):
         "Message":"Method Not Allowed",
         "Error":405
     }),405
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)

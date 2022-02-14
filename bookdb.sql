@@ -5,7 +5,31 @@
 -- Dumped from database version 14.1
 -- Dumped by pg_dump version 14.1
 
--- Started on 2022-02-13 10:36:23 GMT
+-- Started on 2022-02-14 20:08:40 GMT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+DROP DATABASE bookdb;
+--
+-- TOC entry 3594 (class 1262 OID 25042)
+-- Name: bookdb; Type: DATABASE; Schema: -; Owner: postgres
+--
+
+CREATE DATABASE bookdb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'C';
+
+
+ALTER DATABASE bookdb OWNER TO postgres;
+
+\connect bookdb
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -52,7 +76,7 @@ CREATE SEQUENCE public.categories_id_seq
 ALTER TABLE public.categories_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3594 (class 0 OID 0)
+-- TOC entry 3595 (class 0 OID 0)
 -- Dependencies: 209
 -- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -95,7 +119,7 @@ CREATE SEQUENCE public.livres_id_seq
 ALTER TABLE public.livres_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3595 (class 0 OID 0)
+-- TOC entry 3596 (class 0 OID 0)
 -- Dependencies: 211
 -- Name: livres_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -134,6 +158,7 @@ INSERT INTO public.categories (id, libelle) VALUES (6, 'Policier');
 INSERT INTO public.categories (id, libelle) VALUES (7, 'Conte');
 INSERT INTO public.categories (id, libelle) VALUES (8, 'Histoire');
 INSERT INTO public.categories (id, libelle) VALUES (9, 'Love');
+INSERT INTO public.categories (id, libelle) VALUES (10, 'Space');
 
 
 --
@@ -172,24 +197,33 @@ INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VAL
 INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (28, 'PQO5199', 'Jason Wornes', '1978-05-23', '$Not', 'Under Neath', 8);
 INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (29, 'LRKK189', 'The Gunpoint', '2012-05-23', 'Etienne Pillow', 'Universal', 9);
 INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (30, '7UIO157', 'Bullet', '1990-09-19', 'Mr Hines', 'Paramount', 9);
-
-
---
--- TOC entry 3596 (class 0 OID 0)
--- Dependencies: 209
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.categories_id_seq', 9, true);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (32, 'H09', 'Operates Extraterrestrial Probes', '2000-09-23', 'Roscosmos', 'Space X', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (33, '7GM', 'Astronomical catalogues', '1994-07-21', 'Interfederal Space Agency of Belgium', 'Tesla', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (34, 'H5K0', 'Galaxies', '1789-02-13', 'Swiss Space Office', 'NASA', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (35, 'RG2', 'Black holes', '2005-10-29', 'Turkish Space Agency', 'Space X', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (36, 'Kl9', 'Exoplanets and brown dwarfs', '2020-10-15', 'Turkish Space Agency', 'CNES', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (37, 'OKO', 'None of the Above', '1998-04-19', 'European Space Agency', 'JAXA', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (38, 'PQ9', 'Star constellations', '1978-11-29', 'Israel Space Agency', 'CSA', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (39, 'LRK', 'Star clusters', '2012-09-20', 'National Centre for Space Studies', 'IASB', 10);
+INSERT INTO public.livres (id, isbn, titre, datepub, auteur, editeur, idcat) VALUES (31, 'XCERZ7', 'Solar System Find Us', '2020-12-31', 'UK Space Agency', 'NASA', 9);
 
 
 --
 -- TOC entry 3597 (class 0 OID 0)
+-- Dependencies: 209
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.categories_id_seq', 11, true);
+
+
+--
+-- TOC entry 3598 (class 0 OID 0)
 -- Dependencies: 211
 -- Name: livres_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.livres_id_seq', 30, true);
+SELECT pg_catalog.setval('public.livres_id_seq', 40, true);
 
 
 --
@@ -237,8 +271,9 @@ ALTER TABLE ONLY public.livres
     ADD CONSTRAINT livres_idcat_fkey FOREIGN KEY (idcat) REFERENCES public.categories(id);
 
 
--- Completed on 2022-02-13 10:36:23 GMT
+-- Completed on 2022-02-14 20:08:40 GMT
 
 --
 -- PostgreSQL database dump complete
 --
+
