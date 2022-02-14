@@ -22,7 +22,7 @@ host=os.getenv('host')
 #
 #######################################################################################################################################
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:{}@{}:5433/bookdb'.format(password,host)
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:{}@{}:5432/bookdb'.format(password,host)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db=SQLAlchemy(app)
 ########################################################################################################################################
@@ -271,6 +271,12 @@ def getLivreInCategorie(id):
         "Success":True,
         "Book":formLivre,
         "Total Book":len(formLivre)
+    })
+
+@app.route("/",methods=["GET"])
+def index():
+    return jsonify({
+        "Success":True
     })
 ########################################################################################################################################
 #
