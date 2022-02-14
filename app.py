@@ -97,7 +97,7 @@ class Livre(db.Model):
             "Editeur":self.editeur, 
             "Code Categorie":self.idcat, 
             "Date de Publication":self.datepub.strftime("%b %d, %Y") }
-db.create_all()
+
 ########################################################################################################################################
 #
 #                                        AFFICHER TOUT LES LIVRES
@@ -309,6 +309,6 @@ def badRequest(error):
         "Error":405
     }),405
 
-
+db.create_all()
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
